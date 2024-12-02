@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Styles/ForoAnonimo.css">
+</head>
+<body>
+  <div class="min-h-screen bg-[#F8FAFC] relative">
+    <!-- Overlay -->
+    <div id="overlay" class="overlay hidden" onclick="toggleMenu()"></div>
+
+    <!-- Side Menu -->
+    <div id="sideMenu" class="side-menu">
+      <div class="menu-content">
+        <a href="4.1MenuInicio.html">
+          <button class="menu-item" onclick="toggleMenu()">Inicio <span class="icon">🏠</span></button>
+        </a>
+        <a href="10ForoAyuda.html">
+          <button class="menu-item" onclick="toggleMenu()">Foro de Ayuda <span class="icon">💬</span></button>
+        </a>
+        <a href="9ForoAnonimo.html">
+          <button class="menu-item active" onclick="toggleMenu()">Foro Anónimo <span class="icon">👥</span></button>
+        </a>
+        <a href="11RedesdApoyo.html">
+          <button class="menu-item" onclick="toggleMenu()">Redes de Apoyo <span class="icon">🔗</span></button>
+        </a>
+        <a href="SobreNosotros.html">
+          <button class="menu-item" onclick="toggleMenu()">Sobre Nosotros <span class="icon">ℹ️</span></button>
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <header class="header">
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+      <h1 class="title">Foro Anónimo</h1>
+      <button class="clock-btn">⏰</button>
+    </header>
+
+    <main class="container">
+      <!-- Formulario para crear una nueva publicación -->
+      <section class="new-post">
+        <h2>Crear Nueva Publicación</h2>
+        <form id="postForm">
+          <textarea id="postContent" name="postContent" placeholder="Comparte tus pensamientos de forma anónima..." class="textarea"></textarea>
+          <button type="submit" class="publish-btn">Publicar</button>
+        </form>
+      </section>
+
+      <!-- Sección para mostrar las publicaciones -->
+      <section id="posts" class="posts">
+        <!-- Publicaciones se cargarán aquí por AJAX -->
+      </section>
+    </main>
+  </div>
+
+  <!-- Solo asegúrate de que este archivo esté presente y sea el adecuado -->
+  <script src="../Scripts/foroa.js"></script>
+</body>
+</html>
